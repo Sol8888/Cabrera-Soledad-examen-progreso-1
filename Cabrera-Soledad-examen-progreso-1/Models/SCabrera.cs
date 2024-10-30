@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cabrera_Soledad_examen_progreso_1.Models
 {
@@ -22,5 +23,10 @@ namespace Cabrera_Soledad_examen_progreso_1.Models
 
         [DataType(DataType.Date)]
         public DateTime Cumpleanios { get; set; }
+
+        public Celular? Celular { get; set; }
+
+        [ForeignKey("Celular")]
+        public int IdCelular { get; set; }
     }
 }
