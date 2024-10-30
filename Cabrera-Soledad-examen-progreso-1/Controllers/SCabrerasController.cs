@@ -48,7 +48,7 @@ namespace Cabrera_Soledad_examen_progreso_1.Controllers
         // GET: SCabreras/Create
         public IActionResult Create()
         {
-            ViewData["IdCelular"] = new SelectList(_context.Celular, "Id", "Id");
+            ViewData["IdCelular"] = new SelectList(_context.Celular, "Id", "Modelo");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace Cabrera_Soledad_examen_progreso_1.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCelular"] = new SelectList(_context.Celular, "Id", "Id", sCabrera.IdCelular);
+            ViewData["IdCelular"] = new SelectList(_context.Celular, "Id", "Modelo", sCabrera.IdCelular);
             return View(sCabrera);
         }
 
@@ -82,7 +82,7 @@ namespace Cabrera_Soledad_examen_progreso_1.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdCelular"] = new SelectList(_context.Celular, "Id", "Id", sCabrera.IdCelular);
+            ViewData["IdCelular"] = new SelectList(_context.Celular, "Id", "Modelo", sCabrera.IdCelular);
             return View(sCabrera);
         }
 
@@ -118,7 +118,7 @@ namespace Cabrera_Soledad_examen_progreso_1.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCelular"] = new SelectList(_context.Celular, "Id", "Id", sCabrera.IdCelular);
+            ViewData["IdCelular"] = new SelectList(_context.Celular, "Id", "Modelo", sCabrera.IdCelular);
             return View(sCabrera);
         }
 
