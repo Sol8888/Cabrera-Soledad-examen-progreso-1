@@ -10,11 +10,11 @@ namespace Cabrera_Soledad_examen_progreso_1.Models
         
         [StringLength(100)]
         public string Modelo { get; set; }
-        
-        [MaxLength(10000)]
-        public int año  { get; set; }
 
-        [Range(1, 5000, ErrorMessage = "El precio debe ser entre $1 y $5000")]
-        public decimal precio { get; set; }
+        [Display(Name = "Año de Fabricación")]
+        public int Anio  { get; set; }
+
+        [Display(Name = "Precio del Producto")]
+        public decimal Precio { get; set; }
     }
 }
