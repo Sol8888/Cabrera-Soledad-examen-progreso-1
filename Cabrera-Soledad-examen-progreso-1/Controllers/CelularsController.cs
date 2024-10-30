@@ -54,7 +54,7 @@ namespace Cabrera_Soledad_examen_progreso_1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Modelo,año,precio")] Celular celular)
+        public async Task<IActionResult> Create([Bind("Id,Modelo,Anio,Precio")] Celular celular)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Cabrera_Soledad_examen_progreso_1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Modelo,año,precio")] Celular celular)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Modelo,Anio,Precio")] Celular celular)
         {
             if (id != celular.Id)
             {
